@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="ListValidation" verbose="1" >
+    
+   <!-- <parameter name="URL" value="https://recruitment.gobasic.dk/test"></parameter>-->
+    <test name="SelectList" >
+        <parameter name="URL" value="https://recruitment.gobasic.dk/test"></parameter>
+        <classes>
+            <class name="BeruAutomation.Beru2TestNG" />
+        </classes>
+    </test>
+
+    <test name="Dummy">
+     <!-- How to run whole package
+       <packages>
+            <package name="BeruAutomation"></package>
+        </packages>-->
+        <classes>
+            <!--exclude test from class. You can define name like Test.* it means that all test cases will with keyword Test will be excluded-->
+            <class name="BeruAutomation.Dummy1">
+                   <methods><exclude name="Test2"></exclude></methods>
+            </class>
+
+            <!--include only tests from included statement-->
+            <class name="BeruAutomation.Dummy2">
+                <methods><include name="Demo"></include></methods>
+            </class>
+        </classes>
+    </test>
+</suite>
