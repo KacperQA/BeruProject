@@ -38,6 +38,7 @@ public class BeruTestPO extends AbstractPO {
             articleDates.add(getYearFromDate(dateElement));
         }
         return articleDates;
+
     }
 
 
@@ -88,5 +89,6 @@ public class BeruTestPO extends AbstractPO {
         WebElement staticDropdown = driver.findElement(By.id(YEAR_FILTER_DROPDOWN_ID));
         Select yearDropdown = new Select(staticDropdown);
         yearDropdown.selectByVisibleText(option);
+
     }
 }
